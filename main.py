@@ -12,9 +12,13 @@ bot = Bot(TOKEN)
 dp = Dispatcher()
 rg = Router()
 
+def new():
+    print("Hello")
+
 class States(StatesGroup):
     start_menu = State()
     start_fill_form = State()
+
 
 @rg.message(Command("start"))
 async def start(message:types.Message, state:FSMContext):
